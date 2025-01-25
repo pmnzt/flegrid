@@ -52,7 +52,7 @@ function parseJsonToHtml(json) {
     const blockWidth = width > 1 ? `${width} + ${gap * (width - 1)}px` : width;
     const blockHeight = height > 1 ? `${height} + ${gap * (height - 1)}px` : height;
 
-    return `<div class="block" style="width: calc(min(${block_width[0]},${block_width[1]}) * ${blockWidth}); height: calc(min(${block_width[0]},${block_width[1]}) * ${blockHeight});"></div>`;
+    return `<div id="flegrid-block" style="width: calc(min(${block_width[0]},${block_width[1]}) * ${blockWidth}); height: calc(min(${block_width[0]},${block_width[1]}) * ${blockHeight});"></div>`;
   };
 
   const createColumn = (blocks) => {
@@ -100,10 +100,17 @@ function parseJsonToHtml(json) {
   return '';
 }
 
-
-export function parseConfig(input) {
+function parseConfig(input) {
   const json = parseInput(input)
   const html = parseJsonToHtml(json)
 
   return html
+}
+
+export function createLayout(layoutConfig, controlNodes = (nodes) => {}) {
+  const wrapperDiv = document.createElement('div');
+  const html = parseConfig(layoutConfig)
+  wrapperDiv.innerHTML = html;
+  controlNodes(wrapperDiv.querySelectorAll('#flegrid-block'))
+  return wrapperDiv;
 }
