@@ -28,6 +28,8 @@ col=[(1,1),(1,1)]
 The first line `row[blockW=(20vw, 200px), gap=10]:`
 - `row`:
 meaning that the root element is a row.
+- `gap=10`:
+meaning that the blocks will have a gap of 10px between them.
 -  `blockW=(20vw, 200px)`:
 meaning each block will have the size of either `20vw, 200px` depending on the size of the screen it will pick one of these values it done atuomatically via css `min()`.
 - `col=[(1,1),(1,1)]`:
