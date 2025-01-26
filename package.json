@@ -1,6 +1,6 @@
 {
   "name": "flegrid",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "A simple way to create layouts using flexbox with a simple config",
   "main": "flegrid.js",
   "scripts": {
