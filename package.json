@@ -1,0 +1,26 @@
+{
+  "name": "flegrid",
+  "version": "1.0.2",
+  "description": "A simple way to create layouts using flexbox with a simple config",
+  "main": "flegrid.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pmnzt/flegrid.git"
+  },
+  "keywords": [
+    "flexbox",
+    "layout",
+    "layouts",
+    "config",
+    "grid"
+  ],
+  "author": "pmnzt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pmnzt/flegrid/issues"
+  },
+  "homepage": "https://github.com/pmnzt/flegrid#readme"
+}
